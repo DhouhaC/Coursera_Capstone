@@ -1,0 +1,9 @@
+In this project we will give an example of how one can analyse competitiveness and crowdedness in a city chosen to be the next
+destination of a new business. The chosen city is Toronto and the business is a home store. The goal of this analysis is to 
+give labeled map that compares neighborhoods visually to facilitate the decision making.
+We will use Toronto data (neighborhoods and geospatial data) as well as Foursquare data to calculate competitiveness 
+and crowdedness for every neighborhood and then visualize differences between neighborhoods using a labeled map.
+To calculate competitiveness, we need to calculate number of venues that have the category (home store) for every neighborhood.
+Since we can't get exact value of crowdedness, we will get estimated value using available data. We will calculate for every 
+neighborhood the distance to the nearest neighborhood. Then, we will divide the number of venues in this neighborhood by this 
+distance. Finally, we will normalize data to get values between 0 and 1.
