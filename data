@@ -1,9 +1,12 @@
-In this project we will give an example of how one can analyse competitiveness and crowdedness in a city chosen to be the next
-destination of a new business. The chosen city is Toronto and the business is a home store. The goal of this analysis is to 
-give labeled map that compares neighborhoods visually to facilitate the decision making.
-We will use Toronto data (neighborhoods and geospatial data) as well as Foursquare data to calculate competitiveness 
-and crowdedness for every neighborhood and then visualize differences between neighborhoods using a labeled map.
-To calculate competitiveness, we need to calculate number of venues that have the Venue Category (home store) for every neighborhood.
-Since we can't get exact value of crowdedness, we will get estimated value using available data. We will calculate for every 
-neighborhood the distance to the nearest neighborhood, using Longitude and Latitude of neighborhoods. Then, we will divide the 
-number of venues in this neighborhood by this distance. Finally, we will normalize data to get values between 0 and 1.
+Two main sources of data will be used in this project. The first one is a Wikipedia web page [3]. 
+We will scrape this page to get a complete list of Toronto neighborhood as well as corresponding postal codes. 
+The second source of our data is Foursquare API [4]. The API will provide us information about venues in Toronto like 
+Venue name, address, category and geospatial information. This data will be used to first calculate the total number 
+of venues for every neighborhood. Then, we will use it to calculate for a given address the number of competitors based 
+within a chosen radius. Besides, the category data about venues is useful to filter competitors of a given business and 
+to make neighborhood clustering. Another csv file that contains correspondence between postal code, latitude and longitude 
+will be mainly used to get geospatial data for every neighborhood. 
+
+References:
+[3] https://en.wikipedia.org/wiki/List_of_postal_codes_of_Canada:_M 
+[4] https://developer.foursquare.com/
